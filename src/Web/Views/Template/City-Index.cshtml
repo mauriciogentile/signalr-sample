@@ -1,0 +1,41 @@
+﻿<div>
+    <div id="city-list" class="float-left panel">
+        <div class="panel-body">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>City</label>
+                    </div>
+                    <div class="col-md-3">
+                        <a ng-click="orderBy='weather.temp';reverse=!reverse">
+                            <label>Temp <span>&nbsp;&#186;</span><span>F</span></label>
+                        </a>
+                    </div>
+                </div>
+                <div ng-mouseover="showDelete()" ng-mouseleave="hideDelete()">
+                    <div ng-cloak class="row" ng-repeat="city in cities | orderBy:orderBy:reverse">
+                        <a ng-click="select(city.id)">
+                            <div ng-class="{ bold: selectedCity.id == city.id }" class="col-md-4">{{city.name}}</div>
+                        </a>
+                        <div class="col-md-3">
+                            <span class="label label-success">{{city.weather.temp}}</span>
+                        </div>
+                        <div class="col-md-2">
+                            <img alt="" src="{{city.weather.icon}}" />
+                        </div>
+                        <div class="col-md-1" ng-show="deleteVisible">
+                            <button type="button" ng-click="deleteCity(city.id)" class="btn btn-sm btn-danger glyphicon glyphicon-remove"></button>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="!editVisible" class="row">
+                    <div class="col-md-5">
+                        <button type="button" ng-click="showEdit()" class="btn btn-sm btn-primary glyphicon glyphicon-plus"></button>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("City-Add")
+        </div>
+    </div>
+    @Html.Partial("City-Details")
+</div>

@@ -1,0 +1,16 @@
+﻿<div ng-show="editVisible" class="well">
+    <div ng-show="editVisible" class="row">
+        <div class="col-md-5">
+            <input class="form-control" ng-model="newCityName" placeholder="e.g Paris" type="text" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" ng-model="newCityCountry" placeholder="e.g FR" type="text" />
+        </div>
+        <div class="col-md-1">
+            <button ng-click="addCity()" type="button" class="btn btn-primary glyphicon glyphicon-ok-circle"></button>
+        </div>
+        <div class="col-md-1">
+            <button ng-click="hideEdit()" type="button" class="btn btn-warning glyphicon glyphicon-remove"></button>
+        </div>
+    </div>
+</div>

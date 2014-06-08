@@ -1,0 +1,37 @@
+﻿<div id="city-details" class="float-left" ng-show="selectedCity">
+    <div class="panel">
+        <div class="panel-heading">
+            <h2>{{selectedCity.name}}, {{selectedCity.country}}</h2>
+            <h4><span>({{selectedCity.coord.lon}}, {{selectedCity.coord.lat}})</span></h4>
+            <h4><span>{{selectedCity.weather.main}}</span></h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <img alt="" height="100" src="{{selectedCity.weather.icon}}" />
+                </div>
+                <div class="col-md-3 temp">{{selectedCity.weather.temp}}<span>&nbsp;&#186;F</span></div>
+                <div class="col-md-6 weather-details">
+                    <div class="row">
+                        <div class="col-md-3">Now:</div>
+                        <div class="col-md-7">{{selectedCity.weather.description}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Max/Min:</div>
+                        <div class="col-md-4">
+                            {{selectedCity.weather.temp_max}}<span>&nbsp;&#186;F/</span>{{selectedCity.weather.temp_min}}<span>&nbsp;&#186;F</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Pressure:</div>
+                        <div class="col-md-4">{{selectedCity.weather.pressure}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Humidity:</div>
+                        <div class="col-md-4">{{selectedCity.weather.humidity}}%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

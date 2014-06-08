@@ -1,0 +1,38 @@
+﻿<html lang="en" ng-app="app">
+<head>
+    <title>Weather Station Test</title>
+    <link rel="stylesheet" type="text/css" href="~/content/libs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/content/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Weather Station <small>Check out the weather</small></h1>
+        </div>
+        <div ng-controller="AppCtrl">
+            <div class="alert alert-warning alert-dismissable" ng-show="errorVisible">
+                <button ng-click="dismissError()" type="button" class="close" aria-hidden="true">&times;</button>
+                <strong>Error!</strong>&nbsp;<span>{{lastError}}</span>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <script type="text/javascript" src="~/scripts/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="~/scripts/libs/jquery.signalR.min.js"></script>
+    <script type="text/javascript" src="~/signalr/hubs"></script>
+    <script type="text/javascript" src="~/scripts/libs/angular.min.js"></script>
+    <script type="text/javascript" src="~/scripts/libs/angular-route.min.js"></script>
+    <script type="text/javascript" src="~/scripts/app.js"></script>
+    <script type="text/javascript" src="~/scripts/services/backendApi.js"></script>
+    <script type="text/javascript" src="~/scripts/services/weatherApi.js"></script>
+    <script type="text/javascript" src="~/scripts/services/cityEventsHub.js"></script>
+    <script type="text/javascript" src="~/scripts/controllers/app.js"></script>
+    <script type="text/javascript" src="~/scripts/controllers/weatherIndex.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+</html>
