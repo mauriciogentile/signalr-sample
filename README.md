@@ -8,7 +8,7 @@
 
 ###Run
 
-http://localhost/weather
+http://localhost/weather/
 
 ###Client Tests
 
