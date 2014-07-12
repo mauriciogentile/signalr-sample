@@ -1,5 +1,3 @@
-##solaise
-
 ###Requirements
 
 - Visual Studio 2012 or later
